@@ -100,7 +100,6 @@ def paydirect(request):
         for i in cartobj:
             pro=i.product.prc*i.qty
             total_price=total_price+pro
-           
         return render(request,"pay.html",{'cartitems':cartobj,'total_price':int(total_price),"user":fnm})
     return render(request,"cart.html")
 def pay(request):
